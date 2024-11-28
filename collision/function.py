@@ -41,4 +41,13 @@ def intersectionAreaRect(rect1, rect2):
     return x_overlap * y_overlap
 
 
-
+def intersectionAreaMultiRect(rects):
+    if not all(isCorrectRect(rect) for rect in rects):
+        raise RectCorrectError("Некорректный прямоугольник в списке")
+    
+    intersection_area = 0
+    for i in range(len(rects)):
+        for j in range(i + 1, len(rects)):
+            intersection_area += intersectionAreaRect(rects[i], rects[j])
+    
+    return intersection_area
