@@ -30,19 +30,19 @@ except ValueError as e:
     print(e) 
 
 
-rectangles = [ 
+rects = [ 
     [(-3, 1), (9, 10)], 
     [(-7, 0), (13, 12)], 
     [(0, 0), (5, 5)], 
     [(2, 2), (7, 7)] 
 ] 
-print(f"Общая площадь пересечения: {intersectionAreaMultiRect(rectangles)}") 
+print(f"Общая площадь пересечения: {intersectionAreaMultiRect(rects)}") 
 
-incorrect_rectangles = [ 
+rects2 = [ 
     [(-3, 1), (9, 10)], 
     [(3, 17), (13, 1)]
 ] 
 try: 
-    print(f"Общая площадь пересечения: {intersectionAreaMultiRect(incorrect_rectangles)}") 
+    print(f"Общая площадь пересечения: {intersectionAreaMultiRect(rects2)}") 
 except RectCorrectError as e: 
     print(e)
